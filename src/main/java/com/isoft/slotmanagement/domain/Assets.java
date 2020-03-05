@@ -27,6 +27,9 @@ public class Assets implements Serializable {
     @Column(name = "center_id", precision = 21, scale = 2)
     private BigDecimal centerId;
 
+    @Column(name = "ref_id", precision = 21, scale = 2)
+    private BigDecimal refId;
+
     @ManyToOne
     @JsonIgnoreProperties("assets")
     private SlotAssets slotAsset;
@@ -68,6 +71,19 @@ public class Assets implements Serializable {
 
     public void setCenterId(BigDecimal centerId) {
         this.centerId = centerId;
+    }
+
+    public BigDecimal getRefId() {
+        return refId;
+    }
+
+    public Assets refId(BigDecimal refId) {
+        this.refId = refId;
+        return this;
+    }
+
+    public void setRefId(BigDecimal refId) {
+        this.refId = refId;
     }
 
     public SlotAssets getSlotAsset() {
@@ -119,6 +135,7 @@ public class Assets implements Serializable {
             "id=" + getId() +
             ", type=" + getType() +
             ", centerId=" + getCenterId() +
+            ", refId=" + getRefId() +
             "}";
     }
 }
