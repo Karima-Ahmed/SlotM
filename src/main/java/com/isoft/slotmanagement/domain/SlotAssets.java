@@ -30,7 +30,7 @@ public class SlotAssets implements Serializable {
     private SlotInstance slot;
 
     @ManyToOne
-    @JsonIgnoreProperties("assets")
+    @JsonIgnoreProperties("slotAssets")
     private SlotInstance slotInstance;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

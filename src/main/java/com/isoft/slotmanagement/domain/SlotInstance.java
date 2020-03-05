@@ -52,7 +52,7 @@ public class SlotInstance implements Serializable {
     private Set<SlotFacilitators> facilitators = new HashSet<>();
 
     @OneToMany(mappedBy = "slotInstance")
-    private Set<SlotAssets> assets = new HashSet<>();
+    private Set<SlotAssets> slotAssets = new HashSet<>();
 
     @OneToMany(mappedBy = "slotInstance")
     private Set<SlotReservationDetails> slotReservations = new HashSet<>();
@@ -203,29 +203,29 @@ public class SlotInstance implements Serializable {
         this.facilitators = slotFacilitators;
     }
 
-    public Set<SlotAssets> getAssets() {
-        return assets;
+    public Set<SlotAssets> getSlotAssets() {
+        return slotAssets;
     }
 
-    public SlotInstance assets(Set<SlotAssets> slotAssets) {
-        this.assets = slotAssets;
+    public SlotInstance slotAssets(Set<SlotAssets> slotAssets) {
+        this.slotAssets = slotAssets;
         return this;
     }
 
-    public SlotInstance addAssets(SlotAssets slotAssets) {
-        this.assets.add(slotAssets);
+    public SlotInstance addSlotAssets(SlotAssets slotAssets) {
+        this.slotAssets.add(slotAssets);
         slotAssets.setSlotInstance(this);
         return this;
     }
 
-    public SlotInstance removeAssets(SlotAssets slotAssets) {
-        this.assets.remove(slotAssets);
+    public SlotInstance removeSlotAssets(SlotAssets slotAssets) {
+        this.slotAssets.remove(slotAssets);
         slotAssets.setSlotInstance(null);
         return this;
     }
 
-    public void setAssets(Set<SlotAssets> slotAssets) {
-        this.assets = slotAssets;
+    public void setSlotAssets(Set<SlotAssets> slotAssets) {
+        this.slotAssets = slotAssets;
     }
 
     public Set<SlotReservationDetails> getSlotReservations() {
