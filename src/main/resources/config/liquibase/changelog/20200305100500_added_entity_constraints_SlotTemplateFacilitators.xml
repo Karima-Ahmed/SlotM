@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity SlotTemplateFacilitators.
+    -->
+    <changeSet id="20200305100500-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="slot_temp_id"
+                                 baseTableName="slot_template_facilitators"
+                                 constraintName="fk_slot_template_facilitators_slot_temp_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="slot_template"/>
+
+        <addForeignKeyConstraint baseColumnNames="slot_template_id"
+                                 baseTableName="slot_template_facilitators"
+                                 constraintName="fk_slot_template_facilitators_slot_template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="slot_template"/>
+
+    </changeSet>
+</databaseChangeLog>

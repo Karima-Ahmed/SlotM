@@ -1,0 +1,82 @@
+{
+    "name": "SlotInstance",
+    "fields": [
+        {
+            "fieldName": "descAr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descEn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeFrame",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "breakTime",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "timeFrom",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "timeTo",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "centerId",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "availableCapacity",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotFacilitators",
+            "otherEntityRelationshipName": "slotInstance",
+            "relationshipName": "facilitators"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotAssets",
+            "otherEntityRelationshipName": "slotInstance",
+            "relationshipName": "assets"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotReservationDetails",
+            "otherEntityRelationshipName": "slotInstance",
+            "relationshipName": "slotReservations"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotTemplate",
+            "otherEntityRelationshipName": "slotInstance",
+            "relationshipName": "temp",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotTemplate",
+            "otherEntityRelationshipName": "slots",
+            "relationshipName": "slotTemplate",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200305100600",
+    "entityTableName": "slot_instance",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "SlotManagement",
+    "applications": "*",
+    "microserviceName": "SlotManagement"
+}

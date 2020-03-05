@@ -1,0 +1,40 @@
+{
+    "name": "SlotTemplateAssets",
+    "fields": [
+        {
+            "fieldName": "count",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "assetType",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotTemplate",
+            "otherEntityRelationshipName": "slotTemplateAssets",
+            "relationshipName": "slotTemp",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotTemplate",
+            "otherEntityRelationshipName": "tempAssets",
+            "relationshipName": "slotTemplate",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200305100400",
+    "entityTableName": "slot_template_assets",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "SlotManagement",
+    "applications": "*",
+    "microserviceName": "SlotManagement"
+}

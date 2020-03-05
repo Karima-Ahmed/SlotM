@@ -14,6 +14,21 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100300_added_entity_SlotTemplate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100400_added_entity_SlotTemplateAssets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100500_added_entity_SlotTemplateFacilitators.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100600_added_entity_SlotInstance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100700_added_entity_SlotFacilitators.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100800_added_entity_SlotAssets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100900_added_entity_Assets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305101000_added_entity_SlotReservationDetails.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200305100400_added_entity_constraints_SlotTemplateAssets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100500_added_entity_constraints_SlotTemplateFacilitators.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100600_added_entity_constraints_SlotInstance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100700_added_entity_constraints_SlotFacilitators.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100800_added_entity_constraints_SlotAssets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305100900_added_entity_constraints_Assets.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200305101000_added_entity_constraints_SlotReservationDetails.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
