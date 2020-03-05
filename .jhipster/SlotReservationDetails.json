@@ -1,0 +1,52 @@
+{
+    "name": "SlotReservationDetails",
+    "fields": [
+        {
+            "fieldName": "applicantId",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "timeFrom",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "timeTo",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "requestNo",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotInstance",
+            "otherEntityRelationshipName": "slotReservationDetails",
+            "relationshipName": "slot",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "slotInstance",
+            "otherEntityRelationshipName": "slotReservations",
+            "relationshipName": "slotInstance",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200305101000",
+    "entityTableName": "slot_reservation_details",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "SlotManagement",
+    "applications": "*",
+    "microserviceName": "SlotManagement"
+}

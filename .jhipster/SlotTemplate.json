@@ -1,0 +1,72 @@
+{
+    "name": "SlotTemplate",
+    "fields": [
+        {
+            "fieldName": "capacity",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "timeFrame",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "breakTime",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "dayStartTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dayEndTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "descAr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descEn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "centerId",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotTemplateAssets",
+            "otherEntityRelationshipName": "slotTemplate",
+            "relationshipName": "tempAssets"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotTemplateFacilitators",
+            "otherEntityRelationshipName": "slotTemplate",
+            "relationshipName": "tempFacilitators"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slotInstance",
+            "otherEntityRelationshipName": "slotTemplate",
+            "relationshipName": "slots"
+        }
+    ],
+    "changelogDate": "20200305100300",
+    "entityTableName": "slot_template",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "SlotManagement",
+    "applications": "*",
+    "microserviceName": "SlotManagement"
+}
