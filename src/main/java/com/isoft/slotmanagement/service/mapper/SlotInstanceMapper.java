@@ -18,8 +18,8 @@ public interface SlotInstanceMapper extends EntityMapper<SlotInstanceDTO, SlotIn
 
     @Mapping(target = "facilitators", ignore = true)
     @Mapping(target = "removeFacilitators", ignore = true)
-    @Mapping(target = "assets", ignore = true)
-    @Mapping(target = "removeAssets", ignore = true)
+    @Mapping(target = "slotAssets", ignore = true)
+    @Mapping(target = "removeSlotAssets", ignore = true)
     @Mapping(target = "slotReservations", ignore = true)
     @Mapping(target = "removeSlotReservations", ignore = true)
     @Mapping(source = "tempId", target = "temp")

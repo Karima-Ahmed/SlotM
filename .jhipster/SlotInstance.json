@@ -45,7 +45,7 @@
             "relationshipType": "one-to-many",
             "otherEntityName": "slotAssets",
             "otherEntityRelationshipName": "slotInstance",
-            "relationshipName": "assets"
+            "relationshipName": "slotAssets"
         },
         {
             "relationshipType": "one-to-many",
