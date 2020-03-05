@@ -8,6 +8,10 @@
         {
             "fieldName": "centerId",
             "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "refId",
+            "fieldType": "BigDecimal"
         }
     ],
     "relationships": [

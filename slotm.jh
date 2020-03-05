@@ -71,7 +71,8 @@ relationship OneToMany {
 
 entity Assets{
 type BigDecimal,
-centerId BigDecimal
+centerId BigDecimal,
+refId BigDecimal
 }
 
 relationship ManyToOne {
