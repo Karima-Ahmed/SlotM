@@ -1,0 +1,107 @@
+entity SlotTemplate {
+    capacity BigDecimal,
+    timeFrame BigDecimal,
+    breakTime BigDecimal,
+    dayStartTime ZonedDateTime,
+    dayEndTime   ZonedDateTime,
+    descAr String,
+    descEn String,
+    centerId BigDecimal,
+    status BigDecimal
+}
+
+entity SlotTemplateAssets {
+count BigDecimal,
+assetType BigDecimal
+}
+
+relationship ManyToOne {
+  SlotTemplateAssets{slotTemp} to SlotTemplate
+}
+
+relationship OneToMany {
+  SlotTemplate{tempAssets} to SlotTemplateAssets
+}
+
+entity SlotTemplateFacilitators{
+count BigDecimal,
+facilitatorType BigDecimal
+}
+
+relationship ManyToOne {
+  SlotTemplateFacilitators{slotTemp} to SlotTemplate
+}
+relationship OneToMany {
+  SlotTemplate{tempFacilitators} to SlotTemplateFacilitators
+}
+
+entity SlotInstance {
+    descAr String,
+    descEn String,
+    timeFrame BigDecimal,
+    breakTime BigDecimal,
+    timeFrom ZonedDateTime,
+    timeTo ZonedDateTime,
+    centerId BigDecimal,
+    availableCapacity BigDecimal
+}
+
+entity SlotFacilitators{
+userId BigDecimal
+}
+
+relationship ManyToOne {
+  SlotFacilitators{slot} to SlotInstance
+}
+
+relationship OneToMany {
+  SlotInstance{facilitators} to SlotFacilitators
+}
+
+entity SlotAssets{
+
+}
+
+relationship ManyToOne {
+  SlotAssets{slot} to SlotInstance
+}
+relationship OneToMany {
+  SlotInstance{assets} to SlotAssets
+}
+
+entity Assets{
+type BigDecimal,
+centerId BigDecimal
+}
+
+relationship ManyToOne {
+  Assets{slotAsset} to SlotAssets
+}
+relationship OneToMany {
+  SlotAssets{assets} to Assets
+}
+
+entity SlotReservationDetails {
+	applicantId BigDecimal,
+    status BigDecimal,
+    timeFrom ZonedDateTime,
+    timeTo ZonedDateTime,
+    requestNo BigDecimal
+}
+relationship ManyToOne {
+  SlotInstance{temp} to SlotTemplate
+}
+relationship OneToMany {
+  SlotTemplate{slots} to SlotInstance
+}
+
+relationship ManyToOne {
+  SlotReservationDetails{slot} to SlotInstance
+}
+relationship OneToMany {
+  SlotInstance{slotReservations} to SlotReservationDetails
+}
+
+dto all with mapstruct
+
+service all with serviceClass
